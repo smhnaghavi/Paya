@@ -1,5 +1,4 @@
 import sys
-sys.setrecursionlimit(1 << 25)
 
 n = int(input())
 N = 10**5 + 10
