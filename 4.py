@@ -1,4 +1,3 @@
-# In the name of Allah :)
 # Q4
 # Solution in O(m * n * 4**l)
 

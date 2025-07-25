@@ -1,4 +1,3 @@
-# In the name of Allah :)
 # Q9
 # Solution in O(n) time and O(1) space
 
