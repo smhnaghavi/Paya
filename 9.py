@@ -1,6 +1,3 @@
-# Q9
-# Solution in O(n) time and O(1) space
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
