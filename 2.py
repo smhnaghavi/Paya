@@ -1,5 +1,3 @@
-# Q2
-
 n = int(input("Enter n: "))
 cost = list(map(int, input("Enter costs list: ").split()))
 magic = list(map(int, input("Enter magic values: ").split()))
