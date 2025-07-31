@@ -60,7 +60,7 @@ for _, student_id in ranking:
     print(student_id, end=' ')
 print()
 
-# 📊 Plot final scores
+# Plot final scores
 names = [f"Student {student_id}" for _, student_id in ranking]
 scores = [score for score, _ in ranking]
 

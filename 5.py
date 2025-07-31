@@ -10,4 +10,4 @@ s1 = input("Enter the first string: ")
 s2 = input("Enter the second string: ")
 
 extra_char = find_extra_char(s1, s2)
-print("extra character:", extra_char)
+print("Extra character:", extra_char)

@@ -1,14 +1,9 @@
 # Q2
-# Solution in O(b)
 
-try:
-    n = int(input("Enter n: "))
-    cost = list(map(int, input("Enter costs list: ").split()))
-    magic = list(map(int, input("Enter magic values: ").split()))
-    b = int(input("Enter the maximum cost: "))
-except ValueError:
-    print("Invalid Input!")
-    exit()
+n = int(input("Enter n: "))
+cost = list(map(int, input("Enter costs list: ").split()))
+magic = list(map(int, input("Enter magic values: ").split()))
+b = int(input("Enter the maximum cost: "))
 
 dp = [-1 for _ in range(b+1)]
 dp[0] = 0

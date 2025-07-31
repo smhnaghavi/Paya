@@ -40,19 +40,13 @@ def linkedList(a):
         cur = cur.next
     return tmp.next
 
-try:
-    a = list(map(int, input("Enter list values: ").split()))
-    k = int(input("Enter k: "))
-    if not 1 <= k <= len(a):
-        print("Invalid input! k must be between 1 and length of list.")
-        exit()
-    head = func(linkedList(a), k)
-    result = []
-    while head:
-        result.append(head.val)
-        head = head.next
-    print("Result: ", result)
-except ValueError:
-    print("Invalid input!")
-    exit()
+
+a = list(map(int, input("Enter list values: ").split()))
+k = int(input("Enter k: "))
+head = func(linkedList(a), k)
+ans = []
+while head:
+    ans.append(head.val)
+    head = head.next
+print("Result: ", ans)
 

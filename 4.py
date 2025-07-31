@@ -1,6 +1,3 @@
-# Q4
-# Solution in O(m * n * 4**l)
-
 def dfs(i: int, j: int, k: int) -> bool:
     if k == len(word):
         return True
@@ -14,18 +11,12 @@ def dfs(i: int, j: int, k: int) -> bool:
     b[i][j] = tmp
     return False
 
-try:
-    m, n = map(int, input("Enter m and n: ").split())
-    print(f"Enter the {m}x{n} board row by row:")
-    board = [input().split() for _ in range(m)]
-    for row in board:
-        if len(row) != n:
-            print("Invalid Input!")
-            exit()
-    word = input("Enter a word: ")
-except ValueError:
-    print("Invalid Input!")
-    exit()
+
+m, n = map(int, input("Enter m and n: ").split())
+print(f"Enter the {m}x{n} board row by row:")
+board = [input().split() for _ in range(m)]
+word = input("Enter a word: ")
+
 
 cnt_brd = {}
 for row in board:

@@ -12,6 +12,5 @@ def divide(a, b):
 
     return ans
 
-# Input reading
 a, b = map(int, input().split())
-print(divide(a, b));
+print(divide(a, b))
