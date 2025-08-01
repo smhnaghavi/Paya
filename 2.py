@@ -1,6 +1,12 @@
-n = int(input("Enter n: "))
-cost = list(map(int, input("Enter costs list: ").split()))
-magic = list(map(int, input("Enter magic values: ").split()))
+n = int(input("Enter number of vertex: "))
+m = int(input("Enter number of edges: "))
+
+for i in range(1 , n+1):
+    v = int(input())
+    u = int(input())
+
+cost = list(map(int, input("Enter costs list of edges in order: ").split()))
+magic = list(map(int, input("Enter magic values of edges in order: ").split()))
 b = int(input("Enter the maximum cost: "))
 
 dp = [-1 for _ in range(b+1)]
