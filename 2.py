@@ -8,7 +8,7 @@ dp[0] = 0
 
 ans = 0
 for i in range(1, n+1):
-    for j in range(b, cost[i] - 1, -1):
+    for j in range(b, cost[i]-1, -1):
         if j - cost[i] != -1:
             dp[j] = max(dp[j], dp[j-cost[i]] + magic[i])
             ans = max(ans, dp[j])
