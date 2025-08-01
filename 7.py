@@ -67,4 +67,9 @@ DFS1(1, 1)
 DFS2(1, 1)
 
 for i in range(1, n + 1):
-    print(max(dpD[i][0], dpU[i][0]), end=' ')
+    if (max(dpD[i][0], dpU[i][0]) == 0):
+        print(-1)
+    else:
+        print(max(dpD[i][0], dpU[i][0]), end=' ')
+
+print()

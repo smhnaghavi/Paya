@@ -35,7 +35,7 @@ def func(head: ListNode, k: int) -> ListNode:
 def linkedList(iterator):
     dummy = ListNode(0)
     cur = dummy
-    for val in a:
+    for val in iterator:
         cur.next = ListNode(val)
         cur = cur.next
     return dummy.next
