@@ -1,14 +1,14 @@
 def dfs(i: int, j: int, k: int) -> bool:
     if k == len(word):
         return True
-    if i < 0 or i >= m or j < 0 or j >= n or b[i][j] != word[k]:
+    if i < 0 or i >= m or j < 0 or j >= n or brd[i][j] != word[k]:
         return False
-    tmp = b[i][j]
-    b[i][j] = None
+    tmp = brd[i][j]
+    brd[i][j] = None
     for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
         if dfs(i+dx, j+dy, k+1):
             return True
-    b[i][j] = tmp
+    brd[i][j] = tmp
     return False
 
 
