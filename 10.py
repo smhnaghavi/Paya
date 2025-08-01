@@ -1,6 +1,4 @@
-import sys
-
-n = int(input())
+n = int(input("Enter the number of vertices of tree: "))
 N = 10**5 + 10
 G = [[] for _ in range(N)]
 chld = [[] for _ in range(N)]
@@ -10,6 +8,7 @@ dp1 = [0] * N
 par = [0] * N
 mark = [False] * N
 
+print("Enter the edges of tree u v: ")
 for _ in range(n - 1):
     v, u = map(int, input().split())
     G[v].append(u)
@@ -37,12 +36,9 @@ def DFS(v):
 
 DFS(1)
 
-for i in range(1, n + 1):
-    print(dp0[i], dp1[i])
-
-q = int(input())
+q = int(input("Enter the number of queries: "))
 for _ in range(q):
-    v, w = map(int, input().split())
+    v, w = map(int, input("Update u v: ").split())
     val[v] = w
     while v != 0:
         upd(v)
