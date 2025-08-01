@@ -1,7 +1,7 @@
 n = int(input("Enter number of vertex: "))
 m = int(input("Enter number of edges: "))
 
-for i in range(1 , n+1):
+for i in range(1 , m+1):
     v = int(input())
     u = int(input())
 
