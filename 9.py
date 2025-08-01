@@ -3,6 +3,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 def reverseSegment(l: ListNode, r: ListNode) -> ListNode:
     prev = None
     cur = l
@@ -13,37 +14,45 @@ def reverseSegment(l: ListNode, r: ListNode) -> ListNode:
         cur = nxt
     return prev
 
+
 def func(head: ListNode, k: int) -> ListNode:
-    tmp = ListNode(0)
-    tmp.next = head
-    prev = tmp
+    dummy = ListNode(0)
+    dummy.next = head
+    prev = dummy
     while True:
         kth = prev
         for _ in range(k):
             kth = kth.next
             if not kth:
-                return tmp.next
+                return dummy.next
         nxt = kth.next
         start = prev.next
         prev.next = reverseSegment(start, nxt)
         start.next = nxt
         prev = start
 
-def linkedList(a):
-    tmp = ListNode(0)
-    cur = tmp
+
+def linkedList(iterator):
+    dummy = ListNode(0)
+    cur = dummy
     for val in a:
         cur.next = ListNode(val)
         cur = cur.next
-    return tmp.next
+    return dummy.next
 
 
-a = list(map(int, input("Enter list values: ").split()))
+a = linkedList(map(int, input("Enter list values: ").split()))
 k = int(input("Enter k: "))
-head = func(linkedList(a), k)
-ans = []
-while head:
-    ans.append(head.val)
-    head = head.next
-print("Result: ", ans)
+head = func(a, k)
+
+print("Result:", end=" ")
+cur = head
+first = True
+while cur:
+    if not first:
+        print("", end=" ")
+    print(cur.val, end="")
+    first = False
+    cur = cur.next
+print()
 
